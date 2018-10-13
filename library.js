@@ -111,3 +111,17 @@ const provideAverage = function(numbers) {
 }
 
 exports.provideAverage = provideAverage;
+
+//------------------------------(Map length of element)---------------------//
+const mapLengths = function(elements) {
+  mappedLengths = [];
+  for(let element of elements){
+    mappedLengths.push(element.length);
+  }
+
+  return mappedLengths;
+}
+
+exports.mapLengths = mapLengths;
+
+
