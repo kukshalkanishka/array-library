@@ -99,13 +99,15 @@ exports.findLowestNum = findLowestNum;
 
 //------------------------------(provide average of numbers)----------------//
 
-//const provideAverage = function(numbers) {
-//  let sum = 0;
-//  for(let number of numbers){
-//    sum = sum + number;
-//  }
-//
-//  let average = sum/numbers.length;
-//
-//  return average;
-//}
+const provideAverage = function(numbers) {
+  let sum = 0;
+  for(let number of numbers){
+    sum = sum + number;
+  }
+
+  let average = (sum/numbers.length).toFixed(1);
+
+  return average;
+}
+
+exports.provideAverage = provideAverage;
