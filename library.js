@@ -1,14 +1,16 @@
-const reverseNumbers = function(numbers) {
-  let index = numbers.length -1;
-  let reversedNumbers = [];
-  for(number of numbers) {
-    reversedNumbers[index] = number;
+//----------------------(reverse elements)------------------// 
+
+const reverseElements = function(elements) {
+  let index = elements.length -1;
+  let reversedElements = [];
+  for(element of elements) {
+    reversedElements[index] = element;
     index--;
   }
     
-  return reversedNumbers;
+  return reversedElements;
 }
-exports.reverseNumbers = reverseNumbers;
+exports.reverseElements = reverseElements;
 
 //----------------------(selects Every Second Num)--------------------------
 
@@ -25,8 +27,10 @@ const selectEverySecondNum = function(numbers) {
 }
 
 exports.selectEverySecondNum = selectEverySecondNum;
+  
+//-------------------------(filter)-----------------------------------//
 
-const filterNumbers = function(numbers){
+const filterNumbers = function(numbers, choice){
   let filteredNumbers = [[],[]];
 
   for(let number of numbers){
@@ -34,10 +38,23 @@ const filterNumbers = function(numbers){
     filteredNumbers[index].push(number);
     }
 
-  return filteredNumbers[1];
+  return filteredNumbers[choice];
 }
 
-exports.selectOddNumbers = filterNumbers;
+exports.filterNumbers = filterNumbers;
+
+//-------------------------(filter odd numbers)---------------------//
+
+const filterOddNumbers = function(numbers) {
+  let oddChoice = 1;
+  let filteredNumbers = filterNumbers(numbers,oddChoice);
+
+  return filteredNumbers;
+}
+
+exports.filterOddNumbers = filterOddNumbers;
+
+//-----------------------------(Add numbers)-----------------------//
 
 const addNumbers = function(numbers) {
   let sum = 0;
